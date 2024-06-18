@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/styles/styles.css">
+    <title>LAB</title>
+</head>
+
+<body>
+    <button id="buttonAsside" buttonAsside="isOpen"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-arrows-maximize">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M16 4l4 0l0 4" />
+            <path d="M14 10l6 -6" />
+            <path d="M8 20l-4 0l0 -4" />
+            <path d="M4 20l6 -6" />
+            <path d="M16 20l4 0l0 -4" />
+            <path d="M14 14l6 6" />
+            <path d="M8 4l-4 0l0 4" />
+            <path d="M4 4l6 6" />
+        </svg></button>
+    <aside id="aside" aside="open">
+        <section>
+            <header>
+                <h1>RIPs</h1>
+            </header>
+            <main>
+                <ul id="ripsMenu">
+                </ul>
+            </main>
+            <footer>
+                <button id="deleteElement">Delete Selected File <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-trash">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M4 7l16 0" />
+                        <path d="M10 11l0 6" />
+                        <path d="M14 11l0 6" />
+                        <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12" />
+                        <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3" />
+                    </svg></button>
+                <button id="openSlide">Open slide</button>
+                <button id="openUploadAlert" onclick="alertOpen()">charge new slide</button>
+            </footer>
+        </section>
+    </aside>
+    <main id="main" main="80">
+        <article>
+            <section id="0" diapo="titulo">
+                <h1>BIENVENIDOS</h1>
+            </section>
+        </article>
+        <nav>
+            <button><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-big-left-line">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                        d="M12 15v3.586a1 1 0 0 1 -1.707 .707l-6.586 -6.586a1 1 0 0 1 0 -1.414l6.586 -6.586a1 1 0 0 1 1.707 .707v3.586h6v6h-6z" />
+                    <path d="M21 15v-6" />
+                </svg> </button>
+            <span>1/1</span>
+            <button> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-big-right-line">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path
+                        d="M12 9v-3.586a1 1 0 0 1 1.707 -.707l6.586 6.586a1 1 0 0 1 0 1.414l-6.586 6.586a1 1 0 0 1 -1.707 -.707v-3.586h-6v-6h6z" />
+                    <path d="M3 9v6" />
+                </svg> </button>
+        </nav>
+    </main>
+    <article id="uploadAlert" alert class="AlertClose">
+        <section>
+            <h2>Drag or Drop</h2>
+            <p style="color: red;">(not working)</p>
+            <div id="dropArea">
+                <input onchange="loadJSONFile(event)" type="file" id="fileElem" accept=".json">
+                <label class="button" for="fileElem">Select files</label>
+            </div>
+            <button onclick="alertOpen()">cancel</button>
+        </section>
+    </article>
+</body>
+<script src="public/scripts/script.js"></script>
+
+</html>
+
